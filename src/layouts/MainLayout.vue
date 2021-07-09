@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lPr fFf">
-    <q-header elevated class="bg-grey-9">
+    <q-header elevated class="bg-indigo-10">
       <q-toolbar>
         <q-toolbar-title class="text-grey-4">NameApp</q-toolbar-title>
         <q-btn
@@ -22,31 +22,76 @@
       class="bg-grey-9 text-grey-10"
     >
       <q-scroll-area class="fit">
-        <q-list padding>
-          <q-item clickable v-ripple active-class="my-menu-link">
-            <q-item-section avatar>
-              <q-icon name="star" />
-            </q-item-section>
+        <div class="q-pa-md" style="max-width: 250px">
+          <q-list bordered padding class="rounded-borders text-indigo-10">
+            <q-item clickable v-ripple to="/" active-class="my-menu-link" exact>
+              <q-item-section avatar>
+                <q-icon name="home" />
+              </q-item-section>
 
-            <q-item-section> Calificar </q-item-section>
-          </q-item>
+              <q-item-section>Inicio</q-item-section>
+            </q-item>
+            <q-separator spaced />
+            <q-item clickable v-ripple to="/Perfil" active-class="my-menu-link">
+              <q-item-section avatar>
+                <q-icon name="account_circle" />
+              </q-item-section>
 
-          <q-item clickable v-ripple active-class="my-menu-link">
-            <q-item-section avatar>
-              <q-icon name="send" />
-            </q-item-section>
+              <q-item-section>Perfil</q-item-section>
+            </q-item>
+            <q-separator spaced />
+            <q-item
+              clickable
+              v-ripple
+              to="/Servicios"
+              active-class="my-menu-link"
+            >
+              <q-item-section avatar>
+                <q-icon name="saved_search" />
+              </q-item-section>
 
-            <q-item-section> Contactar </q-item-section>
-          </q-item>
+              <q-item-section>Resultados</q-item-section>
+            </q-item>
 
-          <q-item clickable v-ripple active-class="my-menu-link">
-            <q-item-section avatar>
-              <q-icon name="drafts" />
-            </q-item-section>
+            <!-- <q-item
+        clickable
+        v-ripple
+        active-class="my-menu-link"
+      >
+        <q-item-section avatar>
+          <q-icon name="delete" />
+        </q-item-section>
 
-            <q-item-section> Acerca de </q-item-section>
-          </q-item>
-        </q-list>
+        <q-item-section>Trash</q-item-section>
+      </q-item> -->
+
+            <!-- <q-separator spaced /> -->
+
+            <!-- <q-item
+        clickable
+        v-ripple
+        active-class="my-menu-link"
+      >
+        <q-item-section avatar>
+          <q-icon name="settings" />
+        </q-item-section>
+
+        <q-item-section>Settings</q-item-section>
+      </q-item> -->
+
+            <!-- <q-item
+        clickable
+        v-ripple
+        active-class="my-menu-link"
+      >
+        <q-item-section avatar>
+          <q-icon name="help" />
+        </q-item-section>
+
+        <q-item-section>Help</q-item-section>
+      </q-item> -->
+          </q-list>
+        </div>
       </q-scroll-area>
     </q-drawer>
     <q-page-container>
@@ -56,21 +101,21 @@
     <q-footer elevated>
       <q-btn-group spread>
         <q-btn
-          color="grey-9"
+          color="indigo-10"
           size="17px"
           icon="person_search"
           class="text-grey-4"
           label=""
         />
-        <q-btn
-          color="grey-9"
+        <!-- <q-btn
+          color="indigo-10"
           size="17px"
           icon="account_circle"
           class="text-grey-4"
           label=""
-        />
+        /> -->
         <q-btn
-          color="grey-9"
+          color="indigo-10"
           size="17px"
           icon="campaign"
           class="text-grey-4"
@@ -90,8 +135,10 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
 .my-menu-link {
-  background: $light-blue-11;
+  color: white;
+  background: $indigo-10;
 }
 </style>

@@ -1,19 +1,49 @@
 <template>
   <div class="column my-font">
     <div class="row justify-center full-height full-width text-center">
-        <h5>Encuentra Servicios y Apoyos</h5>
-      </div>
-    
+      <h6>
+        Te ayudamos a encontrar<br />
+        el servicio que necesitas
+      </h6>
+    </div>
+
     <div class="row justify-center full-height full-width text-center">
-        <q-input filled type="search" hint="Buscar" label="Ej: albañil, carpintero">
+      <!-- <div class=""> -->
+      <div class="q-gutter-y-md column" style="width: 300px; max-width: 100%">
+        <q-toolbar class="bg-indigo-10 text-white rounded-borders">
+          <q-icon name="search" style="font-size: 2em;"></q-icon>
+          <q-space />
+
+          <q-input
+            style="width: 235px; max-width: 100%"
+            dark
+            dense
+            standout
+            input-class="text-left"
+          >
+            <template v-slot:append>
+              <!-- <q-icon name="search" /> -->
+              <q-icon name="clear" class="cursor-pointer" @click="text = ''" />
+            </template>
+          </q-input>
+        </q-toolbar>
+      </div>
+      <!-- </div> -->
+      <!-- <q-input
+        filled
+        type="search"
+        hint="Buscar"
+        label="Ej: albañil, carpintero"
+      >
         <template v-slot:append>
           <q-icon name="search" />
         </template>
-      </q-input>
+      </q-input> -->
     </div>
+
     <div class="row justify-center full-height full-width text-center q-pa-md">
-      <p class="q-mt-md">Categorías más populares</p>
-      <q-card class="my-card q-mb-md">
+      <!-- 1 -->
+      <q-card class="my-card q-ma-md">
         <q-img
           src="https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_960_720.jpg"
         >
@@ -24,7 +54,8 @@
         <!-- <q-card-section>
       </q-card-section> -->
       </q-card>
-      <q-card class="my-card q-mb-md">
+      <!-- 2 -->
+      <q-card class="my-card q-ma-md">
         <q-img
           src="https://cdn.pixabay.com/photo/2016/01/19/17/57/car-1149997_960_720.jpg"
         >
@@ -35,7 +66,8 @@
         <!-- <q-card-section>
       </q-card-section> -->
       </q-card>
-      <q-card class="my-card q-mb-md">
+      <!-- 3 -->
+      <q-card class="my-card q-ma-md">
         <q-img
           src="https://cdn.pixabay.com/photo/2018/08/22/10/07/summer-3623282_960_720.jpg"
         >
@@ -43,31 +75,22 @@
             Jardinería
           </div>
         </q-img>
-        <q-card class="my-card q-mb-md">
+        <!-- <q-card-section>
+      </q-card-section> -->
+      </q-card>
+      <!-- 4 -->
+      <q-card class="my-card q-ma-md">
         <q-img
           src="https://cdn.pixabay.com/photo/2020/08/10/06/52/cleaning-5476953_960_720.jpg"
         >
           <div class="absolute-bottom text-h6">
-            Caseros
+            Hogar
           </div>
         </q-img>
         <!-- <q-card-section>
       </q-card-section> -->
       </q-card>
-        <!-- <q-card-section>
-      </q-card-section> -->
-      </q-card>
-      <q-card class="my-card q-ma-md">
-        <q-img
-          src="https://cdn.pixabay.com/photo/2017/08/01/09/34/white-2563976_960_720.jpg"
-        >
-          <div class="absolute-bottom text-h6">
-            Cristalería
-          </div>
-        </q-img>
-        <!-- <q-card-section>
-      </q-card-section> -->
-      </q-card>
+      <!-- 5 -->
       <q-card class="my-card q-ma-md">
         <q-img
           src="https://cdn.pixabay.com/photo/2015/07/11/14/53/plumbing-840835_960_720.jpg"
@@ -79,45 +102,13 @@
         <!-- <q-card-section>
       </q-card-section> -->
       </q-card>
+      <!-- 6 -->
       <q-card class="my-card q-ma-md">
         <q-img
-          src="https://cdn.pixabay.com/photo/2017/09/19/22/10/tool-2766835_960_720.jpg"
-        >
-          <div class="absolute-bottom text-h6">
-            Electricidad
-          </div>
-        </q-img>
-        <!-- <q-card-section>
-      </q-card-section> -->
-      </q-card>
-      <q-card class="my-card q-ma-md">
-        <q-img
-          src="https://cdn.pixabay.com/photo/2016/03/09/15/22/painter-1246619_960_720.jpg"
+          src="https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_960_720.jpg"
         >
           <div class="absolute-bottom text-h6">
             Pintura
-          </div>
-        </q-img>
-        <!-- <q-card-section>
-      </q-card-section> -->
-      </q-card>
-      <q-card class="my-card q-ma-md">
-        <q-img
-          src="https://cdn.pixabay.com/photo/2018/08/25/05/02/air-conditioner-3629396_960_720.jpg"
-        >
-          <div class="absolute-bottom text-h6">
-            Climatización
-          </div>
-        </q-img>
-        <!-- <q-card-section>
-      </q-card-section> -->
-      </q-card>
-      <q-card class="my-card q-ma-md">
-        <q-img
-          src="https://cdn.pixabay.com/photo/2017/06/09/04/02/wood-working-2385634_960_720.jpg"
-        >
-          <div class="absolute-bottom text-h6">
-            Carpintería
           </div>
         </q-img>
         <!-- <q-card-section>
@@ -133,7 +124,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.my-font 
+.my-font
   font-family: 'Roboto Condensed', sans-serif
 
 .my-card
