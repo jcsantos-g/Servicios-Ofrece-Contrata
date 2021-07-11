@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lPr fFf">
+  <q-layout view="hHh Lpr lFf">
     <q-header elevated class="bg-indigo-10">
       <q-toolbar>
         <q-toolbar-title class="text-grey-4">NameApp</q-toolbar-title>
@@ -22,16 +22,16 @@
       class="bg-grey-9 text-grey-10"
     >
       <q-scroll-area class="fit">
-        <div class="q-pa-md" style="max-width: 250px">
-          <q-list bordered padding class="rounded-borders text-indigo-10">
-            <q-item clickable v-ripple to="/" active-class="my-menu-link" exact>
+        <div class="q-pt-md" style="max-width: 250px">
+          <q-list class="text-indigo-10">
+            <!-- <q-item clickable v-ripple to="/" active-class="my-menu-link" exact>
               <q-item-section avatar>
                 <q-icon name="home" />
               </q-item-section>
 
               <q-item-section>Inicio</q-item-section>
-            </q-item>
-            <q-separator spaced />
+            </q-item> -->
+            <!-- <q-separator spaced /> -->
             <q-item clickable v-ripple to="/Perfil" active-class="my-menu-link">
               <q-item-section avatar>
                 <q-icon name="account_circle" />
@@ -39,8 +39,8 @@
 
               <q-item-section>Perfil</q-item-section>
             </q-item>
-            <q-separator spaced />
-            <q-item
+            <!-- <q-separator spaced /> -->
+            <!-- <q-item
               clickable
               v-ripple
               to="/Servicios"
@@ -51,45 +51,19 @@
               </q-item-section>
 
               <q-item-section>Resultados</q-item-section>
-            </q-item>
-
-            <!-- <q-item
-        clickable
-        v-ripple
-        active-class="my-menu-link"
-      >
-        <q-item-section avatar>
-          <q-icon name="delete" />
-        </q-item-section>
-
-        <q-item-section>Trash</q-item-section>
-      </q-item> -->
-
+            </q-item> -->
             <!-- <q-separator spaced /> -->
+            <q-item
+              clickable
+              v-ripple
+              active-class="my-menu-link"
+            >
+              <q-item-section avatar>
+                <q-icon name="logout" />
+              </q-item-section>
 
-            <!-- <q-item
-        clickable
-        v-ripple
-        active-class="my-menu-link"
-      >
-        <q-item-section avatar>
-          <q-icon name="settings" />
-        </q-item-section>
-
-        <q-item-section>Settings</q-item-section>
-      </q-item> -->
-
-            <!-- <q-item
-        clickable
-        v-ripple
-        active-class="my-menu-link"
-      >
-        <q-item-section avatar>
-          <q-icon name="help" />
-        </q-item-section>
-
-        <q-item-section>Help</q-item-section>
-      </q-item> -->
+              <q-item-section>Salir</q-item-section>
+            </q-item>
           </q-list>
         </div>
       </q-scroll-area>
@@ -101,6 +75,7 @@
     <q-footer elevated>
       <q-btn-group spread>
         <q-btn
+          to="/"
           color="indigo-10"
           size="17px"
           icon="person_search"
@@ -114,7 +89,9 @@
           class="text-grey-4"
           label=""
         /> -->
+        <q-separator vertical color="indigo-8" />
         <q-btn
+          to="/publicaciones"
           color="indigo-10"
           size="17px"
           icon="campaign"

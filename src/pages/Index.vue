@@ -49,6 +49,14 @@
         >
           <div class="absolute-bottom text-h6">
             Albañilería
+            <q-btn
+              no-caps
+              size="sm"
+              color="indigo-6"
+              label=""
+              icon="search"
+              to="/servicios"
+            ></q-btn>
           </div>
         </q-img>
         <!-- <q-card-section>
